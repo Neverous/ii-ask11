@@ -1,0 +1,9 @@
+LOAD X # ACC = X
+MUL Y # ACC = X*Y
+SUB Z # ACC = X*Y - Z
+STORE A0 # A0 = ACC
+LOAD Z # ACC = Z
+MUL Y # ACC = Z*Y
+ADD X # ACC = Z*Y + X
+MUL A0 # ACC = (Z*Y + X)*(X*Y - Z)
+STORE W # W = ACC
